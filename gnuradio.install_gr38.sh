@@ -44,7 +44,7 @@ sudo ls >/dev/null
 
 # Discovered for certain modules along the way.
 echo "[`date`] Installing prerequisites..."
-sudo apt -y install python3-pip zlib1g-dev libsdl2-dev libcppunit-dev flex python3-twisted libgmp3-dev libgsl-dev libqt5svg5-dev autogen
+sudo apt -y install libssl-dev python3-pip zlib1g-dev libsdl2-dev libcppunit-dev flex python3-twisted libgmp3-dev libgsl-dev libqt5svg5-dev autogen
 
 # Stated prerequisites
 sudo apt -y install git cmake g++ libboost-all-dev libgmp-dev swig python3-numpy \
