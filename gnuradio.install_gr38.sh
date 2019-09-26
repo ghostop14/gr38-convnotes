@@ -44,7 +44,7 @@ sudo ls >/dev/null
 
 # Discovered for certain modules along the way.
 echo "[`date`] Installing prerequisites..."
-sudo apt -y install libssl-dev python3-pip zlib1g-dev libsdl2-dev libcppunit-dev flex python3-twisted libgmp3-dev libgsl-dev libqt5svg5-dev autogen
+sudo apt -y install bison libssl-dev python3-pip zlib1g-dev libsdl2-dev libcppunit-dev flex python3-twisted libgmp3-dev libgsl-dev libqt5svg5-dev autogen
 
 # Stated prerequisites
 sudo apt -y install git cmake g++ libboost-all-dev libgmp-dev swig python3-numpy \
@@ -53,7 +53,9 @@ libsdl1.2-dev libgsl-dev libqwt-qt5-dev libqt5opengl5-dev python3-pyqt5 \
 liblog4cpp5-dev libzmq3-dev python3-yaml python3-click python3-click-plugins 
 
 # Update numpy and install scipy and matplotlib
-sudo pip3 install numpy scipy matplotlib
+# UHD requires some python2 modules as well
+sudo pip2 install mako python-apt ruamel.yaml numpy requests
+sudo pip3 install mako python-apt ruamel.yaml requests numpy scipy matplotlib
 
 echo "[`date`] Building prerequisite components..."
 # UHD

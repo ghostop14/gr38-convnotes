@@ -14,7 +14,7 @@ BUILDPREFIX="-DCMAKE_INSTALL_PREFIX=$INSTALLDIR"
 # prerequisites 
 HASPYBOMBS=`which pybombs | wc -l`
 
-sudo apt install -y python-pip python3-pip python3-dev git libgps-dev libudev-dev python3-lxml libcanberra-gtk-module \
+sudo apt -y install bison python-pip python3-pip python3-dev git libgps-dev libudev-dev python3-lxml libcanberra-gtk-module \
 python3-distutils-extra zlib1g-dev libsdl2-dev libpcap-dev libcppunit-dev flex python3-twisted \
 libgmp3-dev libgsl-dev libqt5svg5-dev autogen
 
